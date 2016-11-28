@@ -66,15 +66,6 @@ namespace ProxyServer
 
 				//State 1: Rebuilding Request Information and Create Connection to Destination Server
 				Uri url = new Uri(requestLines[0].Split(' ')[1]);
-				//string requestFile = requestLines[0].Replace("http://", "").Replace(remoteHost, "");
-				//requestLines[0] = requestFile;
-
-				//requestPayload = "";
-				//foreach (string line in requestLines)
-				//{
-				//	requestPayload += line;
-				//	requestPayload += EOL;
-				//}
 
 				//Socket destServerSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 				Socket destServerSocket = new Socket(IPAddress.Loopback.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
